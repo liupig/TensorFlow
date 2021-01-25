@@ -1,3 +1,5 @@
+转至： https://www.bootwiki.com/tensorflow/tensorflow-mathematical-foundations.html
+
 在TensorFlow中创建基本应用程序之前，了解TensorFlow所需的数学概念非常重要。数学是任何机器学习算法的核心。在数学核心概念的帮助下，定义了特定机器学习算法的解决方案。
 
 向量
@@ -9,4 +11,40 @@ https://cdn.bootwiki.com/upload/manual/20190701/20190701110612_40747.jpg
 矢量模型的图形表示如下所示 
 
 https://cdn.bootwiki.com/upload/manual/20190701/20190701110613_36926.jpg
+
+标量
+标量可以定义为一维向量。标量是那些仅包括大小而没有方向的标量。对于标量，我们只关注幅度。
+标量的示例：儿童的体重和身高参数。
+
+矩阵
+矩阵可以定义为多维数组，以行和列的格式排列。矩阵的大小由行长度和列长度定义
+具有“m”行和“n”列的矩阵，矩阵表示将指定为“m * n矩阵”，其也定义了矩阵的长度。
+
+
+矩阵相加
+如果矩阵具有相同的尺寸，则可以相加两个或更多个矩阵。相加表示根据给定位置添加每个元素。
+请考虑以下示例以了解矩阵的相加方式是如何工作的 -
+https://cdn.bootwiki.com/upload/manual/20190701/20190701110614_21293.png
+
+矩阵减法
+矩阵的减法以类似于添加两个矩阵的方式操作。如果尺寸相等，用户可以减去两个矩阵。
+https://cdn.bootwiki.com/upload/manual/20190701/20190701110615_73618.png
+
+矩阵乘法对于两个矩阵A m * n和B p * q是可乘的，n应该等于p。得到的矩阵是 -
+https://cdn.bootwiki.com/upload/manual/20190701/20190701110617_32858.png
+
+矩阵的转置矩阵A，m * n的转置通常由AT(转置)n * m表示，并且通过将列向量转置为行向量而获得。
+https://cdn.bootwiki.com/upload/manual/20190701/20190701110618_91913.png
+
+
+矢量的点积尺寸n的任何矢量可以表示为矩阵v = R ^ n * 1。
+https://cdn.bootwiki.com/upload/manual/20190701/20190701110618_65310.png
+
+两个向量的点积是相应组件的乘积之和 - 沿相同维度的组件，可以表示为：
+https://cdn.bootwiki.com/upload/manual/20190701/20190701110619_16893.png
+
+
+矢量点积的例子如下 
+https://cdn.bootwiki.com/upload/manual/20190701/20190701110619_30826.png
+
 
