@@ -1,0 +1,87 @@
+张量数据结构
+张量(tensor)用作TensorFlow语言中的基本数据结构。张量表示任何称为数据流图的流程图中的连接边。张量也可以定义为多维数组或列表。
+通过以下三个参数识别张量 -
+
+秩
+张量中描述的维度单位称为秩，它标识了张量的维数。张量的等级可以描述为定义的张量的阶数或n维。
+
+形状
+行数和列数一起定义了Tensor的形状。
+
+类型
+Type描述分配给Tensor元素的数据类型。
+用户需要考虑以下活动来构建Tensor  - 
+
+构建一个n维数组
+转换n维数组。
+https://cdn.bootwiki.com/upload/manual/20190701/20190701110620_73263.jpg
+
+TensorFlow的各种尺度
+TensorFlow包括各种尺度。尺度简述如下 - 
+
+
+一维张量
+一维张量是正常的阵列结构，其包括一组相同数据类型的值。
+声明
+
+>>> import numpy as np
+>>> tensor_1d = np.array([1.3, 1, 4.0, 23.99])
+>>> print tensor_1d
+
+元素的索引与Python列表相同。第一个元素以索引0开始; 要通过索引打印值，只需要指定索引号。
+>>> print tensor_1d[0]
+1.3
+>>> print tensor_1d[2]
+4.0
+
+
+二维张量
+阵列序列用于创建“二维张量”。二维张量的创建如下所述，以下是创建二维数组的完整语法 - 
+>>> import numpy as np
+>>> tensor_2d = np.array([(1,2,3,4),(4,5,6,7),(8,9,10,11),(12,13,14,15)])
+>>> print(tensor_2d)
+[[ 1 2 3 4]
+[ 4 5 6 7]
+[ 8 9 10 11]
+[12 13 14 15]]
+>>>
+
+可以在指定索引号的行号和列号来跟踪二维张量的特定元素。
+>>> tensor_2d[3][2]
+14
+
+张量处理和操作
+在本节中，我们将了解Tensor处理和操作。
+首先，阅读并试着理解以下代码 - 
+import tensorflow as tf
+import numpy as np
+
+matrix1 = np.array([(2,2,2),(2,2,2),(2,2,2)],dtype = 'int32')
+matrix2 = np.array([(1,1,1),(1,1,1),(1,1,1)],dtype = 'int32')
+
+print (matrix1)
+print (matrix2)
+
+matrix1 = tf.constant(matrix1)
+matrix2 = tf.constant(matrix2)
+matrix_product = tf.matmul(matrix1, matrix2)  # 相乘
+matrix_sum = tf.add(matrix1,matrix2)  #相加
+matrix_3 = np.array([(2,7,2),(1,4,2),(9,0,2)],dtype = 'float32')
+print (matrix_3)
+
+matrix_det = tf.matrix_determinant(matrix_3)
+with tf.Session() as sess:
+   result1 = sess.run(matrix_product)
+   result2 = sess.run(matrix_sum)
+   result3 = sess.run(matrix_det)
+
+print (result1)
+print (result2)
+print (result3)
+
+来源：BootWiki
+链接：https://www.bootwiki/tensorflow/tensorflow-basics.html
+著作权归作者所有
+商业转载请联系作者获得授权，非商业转载请注明出处
+
+
